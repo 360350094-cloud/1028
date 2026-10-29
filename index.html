@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>依赖工作室实用软件</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#ec4899',
+                        accent: '#14b8a6',
+                        dark: '#1e293b',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .card-shadow {
+                box-shadow: 0 10px 40px rgba(99, 102, 241, 0.12);
+            }
+            .card-shadow-hover {
+                transition: all 0.3s ease;
+            }
+            .card-shadow-hover:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 16px 50px rgba(99, 102, 241, 0.18);
+            }
+            .link-hover {
+                @apply transition-all duration-300 hover:text-primary hover:underline;
+            }
+            .btn-copy {
+                @apply bg-gradient-to-r from-primary to-secondary text-white px-4 py-2 rounded-lg transition-all hover:opacity-90 active:scale-95 text-sm shadow-md;
+            }
+            .collapse-content {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.35s ease;
+            }
+            .collapse-content.open {
+                max-height: 2000px;
+            }
+            .gradient-header {
+                background: linear-gradient(135deg,#6366f1 0%,#ec4899 100%);
+            }
+            .gradient-contact {
+                background: linear-gradient(135deg,#3b82f6 0%,#14b8a6 100%);
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen">
+<!-- 头部 彩色渐变 -->
+<header class="gradient-header text-white py-16">
+    <div class="container mx-auto px-4 max-w-5xl">
+        <h1 class="text-[clamp(2rem,5vw,3rem)] font-bold text-center tracking-wide">依赖工作室实用软件</h1>
+        <p class="text-white/80 mt-4 text-center text-lg">安卓工具合集 · 苹果请联系咨询</p>
+                                                <p class="text-center text-xl font-semibold text-white/95 tracking-wide">※依赖工作室主接：实习，盖z，打卡，周报，论文，网课、病L等等一站式服务</p>
+    </div>
+</header>
+<main class="container mx-auto px-4 py-12 max-w-5xl">
+    <!-- 软件卡片列表 -->
+    <div class="grid gap-8">
+        <!-- 软件1 新路行pro钉钉专用 -->
+        <div class="bg-white rounded-2xl p-8 card-shadow card-shadow-hover border border-indigo-100">
+            <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center text-white text-xl shadow-lg">
+                    <i class="fa fa-map-marker"></i>
+                </div>
+                <div class="flex-1">
+                    <div class="flex justify-between items-center cursor-pointer" onclick="toggleCollapse('item1')">
+                        <h2 class="text-xl font-bold text-slate-800">新路行pro（钉钉专用）</h2>
+                        <i id="icon-item1" class="fa fa-angle-down text-xl text-primary transition-transform duration-300"></i>
+                    </div>
+                    <div id="item1" class="collapse-content mt-4">
+                        <div class="space-y-4 text-slate-700">
+                            <div>
+                                <div class="font-medium text-indigo-600">软件下载链接</div>
+                                <div class="flex items-center gap-2 mt-1 flex-wrap">
+                                    <a href="https://share.feijipan.com/s/g6xbopP6" target="_blank" class="link-hover break-all text-sm">https://share.feijipan.com/s/g6xbopP6</a>
+                                    <button onclick="copyText('https://share.feijipan.com/s/g6xbopP6')" class="btn-copy">复制链接</button>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="font-medium text-indigo-600">钉钉版本链接</div>
+                                <div class="flex items-center gap-2 mt-1 flex-wrap">
+                                    <a href="https://share.feijipan.com/s/ZJxxEN46" target="_blank" class="link-hover break-all text-sm">https://share.feijipan.com/s/ZJxxEN46</a>
+                                    <button onclick="copyText('https://share.feijipan.com/s/ZJxxEN46')" class="btn-copy">复制链接</button>
+                                </div>
+                            </div>
+                            <!-- 新增：新路行pro钉钉专用购买卡密链接 -->
+                            <div>
+                                <div class="font-medium text-indigo-600">购买卡密链接</div>
+                                <div class="flex items-center gap-2 mt-1 flex-wrap">
+                                    <a href="https://hsfaka.cn/shop/FXHTT4AV/ja6n6x" target="_blank" class="link-hover break-all text-sm">https://hsfaka.cn/shop/FXHTT4AV/ja6n6x</a>
+                                    <button onclick="copyText('https://hsfaka.cn/shop/FXHTT4AV/ja6n6x')" class="btn-copy">复制链接</button>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="font-medium text-indigo-600">使用教程</div>
+                                <div class="flex items-center gap-2 mt-1 flex-wrap">
+                                    <a href="https://my.feishu.cn/wiki/IJP8wsBMziUUYEkwDOfcqYhRnzd?from=from_copylink" target="_blank" class="link-hover break-all text-sm">https://my.feishu.cn/wiki/IJP8wsBMziUUYEkwDOfcqYhRnzd?from=from_copylink</a>
+                                    <button onclick="copyText('https://my.feishu.cn/wiki/IJP8wsBMziUUYEkwDOfcqYhRnzd?from=from_copylink')" class="btn-copy">复制链接</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 软件2 新路行pro全局定位 -->
+        <div class="bg-white rounded-2xl p-8 card-shadow card-shadow-hover border border-pink-100">
+            <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center text-white text-xl shadow-lg">
+                    <i class="fa fa-globe"></i>
+                </div>
+                <div class="flex-1">
+                    <div class="flex justify-between items-center cursor-pointer" onclick="toggleCollapse('item2')">
+                        <div>
+                            <h2 class="text-xl font-bold text-slate-800">新路行pro（全局定位）</h2>
+                            <p class="text-slate-500 mt-1">适用于改企业微信、微信小程序，接龙管家、群报数、手机各种app</p>
+                        </div>
+                        <i id="icon-item2" class="fa fa-angle-down text-xl text-secondary transition-transform duration-300"></i>
+                    </div>
+                    <div id="item2" class="collapse-content mt-4">
+                        <div class="space-y-4 text-slate-700">
+                            <div>
+                                <div class="font-medium text-pink-600">软件下载链接</div>
+                                <div class="flex items-center gap-2 mt-1 flex-wrap">
+                                    <a href="https://share.feijipan.com/s/g6xbopP6" target="_blank" class="link-hover break-all text-sm">https://share.feijipan.com/s/g6xbopP6</a>
+                                    <button onclick="copyText('https://share.feijipan.com/s/g6xbopP6')" class="btn-copy">复制链接</button>
+                                </div>
+                            </div>
+                            <!-- 新增：新路行pro全局定位购买卡密链接 -->
+                            <div>
+                                <div class="font-medium text-pink-600">购买卡密链接</div>
+                                <div class="flex items-center gap-2 mt-1 flex-wrap">
+                                    <a href="https://hsfaka.cn/shop/FXHTT4AV/ja6n6x" target="_blank" class="link-hover break-all text-sm">https://hsfaka.cn/shop/FXHTT4AV/ja6n6x</a>
+                                    <button onclick="copyText('https://hsfaka.cn/shop/FXHTT4AV/ja6n6x')" class="btn-copy">复制链接</button>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="font-medium text-pink-600">使用教程</div>
+                                <div class="flex items-center gap-2 mt-1 flex-wrap">
+                                    <a href="https://share.feijipan.com/s/Hjxu22iw?from=from_copylink" target="_blank" class="link-hover break-all text-sm">https://share.feijipan.com/s/Hjxu22iw</a>
+                                    <button onclick="copyText('https://share.feijipan.com/s/Hjxu22iw')" class="btn-copy">复制链接</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 软件3 袋鼠多开 -->
+        <div class="bg-white rounded-2xl p-8 card-shadow card-shadow-hover border border-teal-100">
+            <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-500 flex items-center justify-center text-white text-xl shadow-lg">
+                    <i class="fa fa-clone"></i>
+                </div>
+                <div class="flex-1">
+                    <div class="flex justify-between items-center cursor-pointer" onclick="toggleCollapse('item3')">
+                        <div>
+                            <h2 class="text-xl font-bold text-slate-800">袋鼠多开</h2>
+                            <p class="text-slate-500 mt-1">适用于多个APP一起使用，各改各的位置，保护隐私，工学云，今日校园，学习通，易校园等等</p>
+                        </div>
+                        <i id="icon-item3" class="fa fa-angle-down text-xl text-accent transition-transform duration-300"></i>
+                    </div>
+                    <div id="item3" class="collapse-content mt-4">
+                        <div class="space-y-4 text-slate-700">
+                            <div>
+                                <div class="font-medium text-teal-600">软件下载链接</div>
+                                <div class="flex items-center gap-2 mt-1 flex-wrap">
+                                    <a href="https://share.feijipan.com/s/4z9O7ezJ" target="_blank" class="link-hover break-all text-sm">https://share.feijipan.com/s/4z9O7ezJ</a>
+                                    <button onclick="copyText('https://share.feijipan.com/s/4z9O7ezJ')" class="btn-copy">复制链接</button>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="font-medium text-teal-600">购买卡密链接</div>
+                                <div class="flex items-center gap-2 mt-1 flex-wrap">
+                                    <a href="https://hsfaka.cn/shop/FXHTT4AV/9rc7yu" target="_blank" class="link-hover break-all text-sm">https://hsfaka.cn/shop/FXHTT4AV/9rc7yu</a>
+                                    <button onclick="copyText('https://hsfaka.cn/shop/FXHTT4AV/9rc7yu')" class="btn-copy">复制链接</button>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="font-medium text-teal-600">使用教程</div>
+                                <div class="flex items-center gap-2 mt-1 flex-wrap">
+                                    <a href="https://my.feishu.cn/wiki/U1M4wWiDGiw1tRkopwrcfnYynXe?from=from_copylink" target="_blank" class="link-hover break-all text-sm">https://my.feishu.cn/wiki/U1M4wWiDGiw1tRkopwrcfnYynXe?from=from_copylink</a>
+                                    <button onclick="copyText('https://my.feishu.cn/wiki/U1M4wWiDGiw1tRkopwrcfnYynXe?from=from_copylink')" class="btn-copy">复制链接</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 软件4 企业微信（内置版） -->
+        <div class="bg-white rounded-2xl p-8 card-shadow card-shadow-hover border border-blue-100">
+            <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center text-white text-xl shadow-lg">
+                    <i class="fa fa-comments"></i>
+                </div>
+                <div class="flex-1">
+                    <div class="flex justify-between items-center cursor-pointer" onclick="toggleCollapse('item4')">
+                        <h2 class="text-xl font-bold text-slate-800">企业微信（内置版）</h2>
+                        <i id="icon-item4" class="fa fa-angle-down text-xl text-blue-500 transition-transform duration-300"></i>
+                    </div>
+                    <div id="item4" class="collapse-content mt-4">
+                        <div class="space-y-4 text-slate-700">
+                            <div>
+                                <div class="font-medium text-blue-600">下载地址</div>
+                                <div class="flex items-center gap-2 mt-1 flex-wrap">
+                                    <a href="https://share.feijipan.com/s/4s2hdHPv" target="_blank" class="link-hover break-all text-sm">https://share.feijipan.com/s/4s2hdHPv</a>
+                                    <button onclick="copyText('https://share.feijipan.com/s/4s2hdHPv')" class="btn-copy">复制链接</button>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="font-medium text-blue-600">视频教程</div>
+                                <div class="flex items-center gap-2 mt-1 flex-wrap">
+                                    <a href="https://flowus.cn/hckj/share/2dc50ad8-a7d3-4bc8-98f2-3af36f336f6b?code=MWSYWJ" target="_blank" class="link-hover break-all text-sm">https://flowus.cn/hckj/share/2dc50ad8-a7d3-4bc8-98f2-3af36f336f6b?code=MWSYWJ</a>
+                                    <button onclick="copyText('https://flowus.cn/hckj/share/2dc50ad8-a7d3-4bc8-98f2-3af36f336f6b?code=MWSYWJ')" class="btn-copy">复制链接</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 软件5 钉钉（内置版） -->
+        <div class="bg-white rounded-2xl p-8 card-shadow card-shadow-hover border border-sky-100">
+            <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-sky-500 to-cyan-500 flex items-center justify-center text-white text-xl shadow-lg">
+                    <i class="fa fa-paper-plane"></i>
+                </div>
+                <div class="flex-1">
+                    <div class="flex justify-between items-center cursor-pointer" onclick="toggleCollapse('item5')">
+                        <h2 class="text-xl font-bold text-slate-800">钉钉（内置版）</h2>
+                        <i id="icon-item5" class="fa fa-angle-down text-xl text-sky-500 transition-transform duration-300"></i>
+                    </div>
+                    <div id="item5" class="collapse-content mt-4">
+                        <div class="space-y-4 text-slate-700">
+                            <div>
+                                <div class="font-medium text-sky-600">下载地址</div>
+                                <div class="flex items-center gap-2 mt-1 flex-wrap">
+                                    <a href="https://share.feijipan.com/s/uKZvMP5V" target="_blank" class="link-hover break-all text-sm">https://share.feijipan.com/s/uKZvMP5V</a>
+                                    <button onclick="copyText('https://share.feijipan.com/s/uKZvMP5V')" class="btn-copy">复制链接</button>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="font-medium text-sky-600">视频教程</div>
+                                <div class="flex items-center gap-2 mt-1 flex-wrap">
+                                    <a href="https://mcn83va4wqe3.feishu.cn/wiki/UlDwwyouTiqxCxkePSBcVHBsn6c" target="_blank" class="link-hover break-all text-sm">https://mcn83va4wqe3.feishu.cn/wiki/UlDwwyouTiqxCxkePSBcVHBsn6c</a>
+                                    <button onclick="copyText('https://mcn83va4wqe3.feishu.cn/wiki/UlDwwyouTiqxCxkePSBcVHBsn6c')" class="btn-copy">复制链接</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 软件6 学习通课程签到 -->
+        <div class="bg-white rounded-2xl p-8 card-shadow card-shadow-hover border border-violet-100">
+            <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-500 to-fuchsia-500 flex items-center justify-center text-white text-xl shadow-lg">
+                    <i class="fa fa-check-square-o"></i>
+                </div>
+                <div class="flex-1">
+                    <div class="flex justify-between items-center cursor-pointer" onclick="toggleCollapse('item6')">
+                        <div>
+                            <h2 class="text-xl font-bold text-slate-800">学习通课程签到</h2>
+                            <p class="text-slate-500 mt-1">照片、人脸、位置、手势、扫码、数字、群签到等多种签到方式，均可完美解决</p>
+                        </div>
+                        <i id="icon-item6" class="fa fa-angle-down text-xl text-violet-500 transition-transform duration-300"></i>
+                    </div>
+                    <div id="item6" class="collapse-content mt-4">
+                        <div class="space-y-5 text-slate-700">
+                            <div>
+                                <div class="font-medium text-violet-600">支持签到方式</div>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span class="px-3 py-1 rounded-full bg-violet-50 text-violet-600 text-xs font-medium">📷 照片签到</span>
+                                    <span class="px-3 py-1 rounded-full bg-violet-50 text-violet-600 text-xs font-medium">😊 人脸签到</span>
+                                    <span class="px-3 py-1 rounded-full bg-violet-50 text-violet-600 text-xs font-medium">📍 位置签到</span>
+                                    <span class="px-3 py-1 rounded-full bg-violet-50 text-violet-600 text-xs font-medium">✋ 手势签到</span>
+                                    <span class="px-3 py-1 rounded-full bg-violet-50 text-violet-600 text-xs font-medium">🔳 扫码签到</span>
+                                    <span class="px-3 py-1 rounded-full bg-violet-50 text-violet-600 text-xs font-medium">🔢 数字签到</span>
+                                    <span class="px-3 py-1 rounded-full bg-violet-50 text-violet-600 text-xs font-medium">👥 群签到</span>
+                                </div>
+                            </div>
+                            <div class="bg-violet-50/70 rounded-xl p-4 border border-violet-100">
+                                <div class="flex justify-between items-center mb-2">
+                                    <div class="font-medium text-violet-600">下单信息模版</div>
+                                    <button onclick="copyTpl('item6')" class="btn-copy !py-1 !px-3 !text-xs">复制模版</button>
+                                </div>
+                                <pre id="tpl-item6" class="text-sm leading-relaxed text-slate-700 whitespace-pre-wrap font-sans">学习通课程签到
+课程名字：
+账号：
+密码：
+时间：
+地址：
+照片：（请附照片）</pre>
+                            </div>
+                            <div class="text-sm text-slate-500">填好上方模版，复制后直接发给客服即可安排 👇</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 软件7 今日校园查寝 /请假-->
+        <div class="bg-white rounded-2xl p-8 card-shadow card-shadow-hover border border-orange-100">
+            <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-rose-500 flex items-center justify-center text-white text-xl shadow-lg">
+                    <i class="fa fa-home"></i>
+                </div>
+                <div class="flex-1">
+                    <div class="flex justify-between items-center cursor-pointer" onclick="toggleCollapse('item7')">
+                        <div>
+                            <h2 class="text-xl font-bold text-slate-800">今日校园查寝/请假</h2>
+                            <p class="text-slate-500 mt-1">查寝打卡专用，按你给的时间与地址，照片一并发我，搞定签到</p>
+                        </div>
+                        <i id="icon-item7" class="fa fa-angle-down text-xl text-orange-500 transition-transform duration-300"></i>
+                    </div>
+                    <div id="item7" class="collapse-content mt-4">
+                        <div class="space-y-5 text-slate-700">
+                            <div class="bg-orange-50/70 rounded-xl p-4 border border-orange-100">
+                                <div class="flex justify-between items-center mb-2">
+                                    <div class="font-medium text-orange-600">查寝下单信息模版</div>
+                                    <button onclick="copyTpl('item7')" class="btn-copy !py-1 !px-3 !text-xs">复制模版</button>
+                                </div>
+                                <pre id="tpl-item7" class="text-sm leading-relaxed text-slate-700 whitespace-pre-wrap font-sans">今日校园查寝
+学校：
+账号：
+密码：
+打卡地址：
+查寝时间：
+照片：（请附照片）</pre>
+                            </div>
+                            <div class="text-sm text-slate-500">填好上方模版，复制后直接发给客服即可安排 👇</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 联系区域 彩色渐变 -->
+    <div class="mt-12 gradient-contact text-white rounded-2xl p-8 card-shadow text-center">
+        <h3 class="text-xl font-semibold mb-2">设备说明</h3>
+        <p class="text-white/85 mb-4">以上全部为安卓端使用，苹果设备请私聊咨询</p>
+        <div class="text-lg">
+            <i class="fa fa-wechat mr-2"></i>绿泡泡：<span class="font-bold">360350094</span>
+        </div>
+    </div>
+</main>
+
+<footer class="py-8 text-center text-slate-600 text-sm mt-8 border-t border-slate-200">
+    <p class="text-center text-xl font-semibold text-white/95 tracking-wide">※依赖工作室主接：实习，盖z，打卡，周报，论文，网课、病L等等一站式服务</p>
+    <p>本页面依赖工作室实用软件，虚拟产品，试用满意在购买</p>
+</footer>
+
+<script>
+//折叠展开
+function toggleCollapse(id) {
+    const box = document.getElementById(id);
+    const icon = document.getElementById('icon-' + id);
+    box.classList.toggle('open');
+    if(box.classList.contains('open')){
+        icon.style.transform = 'rotate(180deg)';
+    }else{
+        icon.style.transform = 'rotate(0deg)';
+    }
+}
+//复制文本功能
+function copyText(text) {
+    navigator.clipboard.writeText(text).then(()=>{
+        alert("链接复制成功！");
+    }).catch(err=>{
+        alert("复制失败，请手动复制："+text);
+    })
+}
+//复制下单模版（自动去掉提示括号里的说明，方便直接发）
+function copyTpl(id) {
+    const el = document.getElementById('tpl-' + id);
+    if(!el) return;
+    let txt = el.innerText.replace(/（请附照片）/g, '').replace(/：\s*$/gm, '：').trim();
+    navigator.clipboard.writeText(txt).then(()=>{
+        alert("模版已复制，填上信息发给客服即可！");
+    }).catch(()=>{
+        alert("复制失败，请长按模版手动复制～");
+    });
+}
+</script>
+</body>
+</html>
+<!-- （注：内容由AI生成） -->
